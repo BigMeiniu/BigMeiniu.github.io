@@ -16,8 +16,10 @@
 <meta property="og:description" content="一 简单排序">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201019135736928.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201019211318938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201019213046839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-10-19T05:30:10.000Z">
-<meta property="article:modified_time" content="2020-10-19T09:45:41.421Z">
+<meta property="article:modified_time" content="2020-10-19T13:43:10.075Z">
 <meta property="article:author" content="BigMeiniu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201019135736928.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center">
@@ -184,9 +186,9 @@
 <p><strong>测试</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student();</span><br><span class="line">        stu1.setUsername(<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line">        stu1.setAge(<span class="number">17</span>);</span><br><span class="line">        Student stu2 = <span class="keyword">new</span> Student();</span><br><span class="line">        stu2.setUsername(<span class="string">&quot;lisi&quot;</span>);</span><br><span class="line">        stu2.setAge(<span class="number">19</span>);</span><br><span class="line">        Comparable max = getMax(stu1, stu2);</span><br><span class="line">        System.out.println(max);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//测试方法，获取两个元素中的较大值</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Comparable <span class="title">getMax</span><span class="params">(Comparable c1,Comparable c2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> cmp = c1.compareTo(c2);</span><br><span class="line">        <span class="keyword">if</span> (cmp&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> c1;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> c2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-2冒泡排序-Bubble-Sort"><a href="#1-2冒泡排序-Bubble-Sort" class="headerlink" title="1.2冒泡排序(Bubble Sort)"></a>1.2冒泡排序(Bubble Sort)</h2><h3 id="需求-1"><a href="#需求-1" class="headerlink" title="需求"></a>需求</h3><p>排序前：{4,5,6,3,2,1}  </p>
-<p>排序后：{1,2,3,4,5,6}  </p>
-<h4 id="排序原理"><a href="#排序原理" class="headerlink" title="排序原理:"></a>排序原理:</h4><ol>
+<h2 id="1-2冒泡排序-Bubble-Sort"><a href="#1-2冒泡排序-Bubble-Sort" class="headerlink" title="1.2冒泡排序(Bubble Sort)"></a>1.2冒泡排序(Bubble Sort)</h2><h3 id="需求-1"><a href="#需求-1" class="headerlink" title="需求"></a>需求</h3><p><strong>排序前：{4,5,6,3,2,1}</strong>  </p>
+<p><strong>排序后：{1,2,3,4,5,6}</strong>  </p>
+<h4 id="排序原理："><a href="#排序原理：" class="headerlink" title="排序原理："></a>排序原理：</h4><ol>
 <li><p>比较相邻的元素,如果前一个元素比后一个元素大，就交换这两个元素的位置</p>
 </li>
 <li><p>对每一对相邻元素做同样的工作，从开始第一对元素到结尾的最后一对元素,最终最后位置的元素就是最大值</p>
@@ -232,7 +234,88 @@
 </li>
 </ul>
 <p><strong>(N^2/2-N/2)+(N^2/2-N/2)=N^2-N</strong></p>
-<p><strong>冒泡排序的时间复杂度为O(N^2)</strong></p>
+<p><strong>冒泡排序的时间复杂度为O(N^2)</strong>  </p>
+<h2 id="1-3选择排序"><a href="#1-3选择排序" class="headerlink" title="1.3选择排序"></a>1.3选择排序</h2><h3 id="需求-2"><a href="#需求-2" class="headerlink" title="需求:"></a>需求:</h3><p><strong>排序前：{4,6,8,7,9,2,10,1}</strong></p>
+<p><strong>排序后：{1,2,4,5,7,8,9,10}</strong></p>
+<h4 id="排序原理"><a href="#排序原理" class="headerlink" title="排序原理:"></a>排序原理:</h4><ol>
+<li><p>.每一次遍历的过程中，都假定第一个索引处的元素是最小值，和其他索引处的值依次进行比较，如果当前索引处 的值大于其他某个索引处的值，则假定其他某个索引出的值为最小值，最后可以找到最小值所在的索引</p>
+</li>
+<li><p>交换第一个索引处和最小值所在的索引处的值</p>
+<p><img src="https://img-blog.csdnimg.cn/20201019211318938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center" alt="Selection"></p>
+</li>
+</ol>
+<p><strong>选择排序API：</strong></p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>Selection</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>构造方法</td>
+<td>Selection();创建Selection对象</td>
+</tr>
+<tr>
+<td>成员方法</td>
+<td>1.public static void sort(Comparable[] a)：对数组内的元素进行排序                                             2.private static boolean greater(Comparable v,Comparable w):判断v是否大于w                                       3.private static void exch(Comparable[] a,int i,int j)：交换a数组中，索引i和索引j处的值</td>
+</tr>
+</tbody></table>
+<p><strong>选择排序代码:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//排序代码</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Selection</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		对数组a中的元素进行排序</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=a.length-<span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//假定本次遍历，最小值所在的索引是i</span></span><br><span class="line">            <span class="keyword">int</span> minIndex=i;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;a.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (greater(a[minIndex],a[j]))&#123;</span><br><span class="line">                    <span class="comment">//跟换最小值所在的索引</span></span><br><span class="line">                    minIndex=j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//交换i索引处和minIndex索引处的值</span></span><br><span class="line">            exch(a,i,minIndex);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		比较v元素是否大于w元素</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">greater</span><span class="params">(Comparable v,Comparable w)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> v.compareTo(w)&gt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		数组元素i和j交换位置</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">exch</span><span class="params">(Comparable[] a,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        Comparable t = a[i];</span><br><span class="line">        a[i]=a[j];</span><br><span class="line">        a[j]=t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试代码</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Integer[] a = &#123;<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">10</span>,<span class="number">1</span>&#125;;</span><br><span class="line">        Selection.sort(a);</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>选择排序时间复杂度：</strong></p>
+<p>选择排序使用了双层for循环，其中外层循环完成了数据交换，内层循环完成了数据比较，所以我们分别统计数据 交换次数和数据比较次数</p>
+<p>数据比较次数：</p>
+<p>*<em>(N-1)+(N-2)+(N-3)+…+2+1=((N-1)+1)</em>(N-1)/2=N^2/2-N/2**</p>
+<p>数据交换次数：</p>
+<p><strong>N-1</strong></p>
+<p>时间复杂度:<strong>O(N^2)</strong></p>
+<h2 id="1-4插入排序"><a href="#1-4插入排序" class="headerlink" title="1.4插入排序"></a>1.4插入排序</h2><h2 id="需求-3"><a href="#需求-3" class="headerlink" title="需求:"></a>需求:</h2><p><strong>排序前：{4,3,2,10,12,1,5,6}</strong></p>
+<p><strong>排序后：{1,2,3,4,5,6,10,12}</strong></p>
+<h4 id="排序原理-1"><a href="#排序原理-1" class="headerlink" title="排序原理:"></a>排序原理:</h4><ol>
+<li><p>把所有的元素分为两组，已经排序的和未排序的</p>
+</li>
+<li><p>找到未排序的组中的第一个元素，向已经排序的组中进行插入</p>
+</li>
+<li><p>倒叙遍历已经排序的元素，依次和待插入的元素进行比较，直到找到一个元素小于等于待插入元素，那么就把待 插入元素放到这个位置，其他的元素向后移动一位</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201019213046839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center" alt="Insertion Sort"></p>
+<p><strong>插入排序API：</strong></p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>Insertion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>构造方法</td>
+<td>Insertion();创建Insertion对象</td>
+</tr>
+<tr>
+<td>成员方法</td>
+<td>1.public static void sort(Comparable[] a)：对数组内的元素进行排序                                                2.private static boolean greater(Comparable v,Comparable w):判断v是否大于w                                          3.private static void exch(Comparable[] a,int i,int j)：交换a数组中，索引i和索引j处的值</td>
+</tr>
+</tbody></table>
+<p><strong>插入排序代码:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Insertion</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		对数组a中的元素进行排序</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;a.length;i++)&#123;</span><br><span class="line">            <span class="comment">//当前元素为a[i],依次和i前面的元素比较，找到一个小于等于a[i]的元素</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&gt;<span class="number">0</span>;j--)&#123;</span><br><span class="line">                <span class="keyword">if</span> (greater(a[j-<span class="number">1</span>],a[j]))&#123;</span><br><span class="line">                    <span class="comment">//交换元素</span></span><br><span class="line">                    exch(a,j-<span class="number">1</span>,j);</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">//找到了该元素，结束</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		比较v元素是否大于w元素</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">greater</span><span class="params">(Comparable v,Comparable w)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> v.compareTo(w)&gt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		数组元素i和j交换位置</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">exch</span><span class="params">(Comparable[] a,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        Comparable t = a[i];</span><br><span class="line">        a[i]=a[j];</span><br><span class="line">        a[j]=t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>测试</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>插入排序时间复杂度:</strong></p>
+<p>插入排序使用了双层for循环，其中内层循环的循环体是真正完成排序的代码，所以，我们分析插入排序的时间复 杂度，主要分析一下内层循环体的执行次数即可</p>
+<p>最坏情况，也就是待排序的数组元素为**{12,10,6,5,4,3,2,1}**</p>
+<p>比较的次数为：</p>
+<p>*<em>(N-1)+(N-2)+(N-3)+…+2+1=((N-1)+1)</em>(N-1)/2=N^2/2-N/2**</p>
+<p>交换的次数为：</p>
+<p>*<em>(N-1)+(N-2)+(N-3)+…+2+1=((N-1)+1)</em>(N-1)/2=N^2/2-N/2**</p>
+<p>时间复杂度:<strong>O(N^2)</strong></p>
 
       
 
@@ -360,7 +443,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">一 简单排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1Comparable-interface%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">1.1Comparable interface介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">1.1.1.</span> <span class="toc-text">需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-number">1.2.</span> <span class="toc-text">1.2冒泡排序(Bubble Sort)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">需求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">排序原理:</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">一 简单排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1Comparable-interface%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">1.1Comparable interface介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">1.1.1.</span> <span class="toc-text">需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F-Bubble-Sort"><span class="toc-number">1.2.</span> <span class="toc-text">1.2冒泡排序(Bubble Sort)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">需求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">排序原理：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">1.3.</span> <span class="toc-text">1.3选择排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">需求:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%8E%9F%E7%90%86"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">排序原理:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.</span> <span class="toc-text">1.4插入排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-3"><span class="toc-number">1.5.</span> <span class="toc-text">需求:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%8E%9F%E7%90%86-1"><span class="toc-number">1.5.0.1.</span> <span class="toc-text">排序原理:</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

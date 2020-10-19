@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020 | Lecherous&amp;fairy</title>
+  <title>高级排序 | Lecherous&amp;fairy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lecherous&amp;fairy">
-<meta property="og:url" content="http://example.com/archives/2020/index.html">
+  <meta name="description" content="高级排序1.1希尔排序 希尔排序是插入排序的一种，又称“缩小增量排序”，是插入排序算法的一种更高效的改进版本  缩减插入排序的时间复杂度   需求排序前：{9,1,2,5,7,4,8,6,3,5} 排序后：{1,2,3,4,5,5,6,7,8,9} 排序原理: .选定一个增长量h，按照增长量h作为数据分组的依据，对数据进行分组  对分好组的每一组数据完成插入排序  减小增长量，最小减为1，重复第二">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高级排序">
+<meta property="og:url" content="http://example.com/2020/10/20/%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Lecherous&amp;fairy">
+<meta property="og:description" content="高级排序1.1希尔排序 希尔排序是插入排序的一种，又称“缩小增量排序”，是插入排序算法的一种更高效的改进版本  缩减插入排序的时间复杂度   需求排序前：{9,1,2,5,7,4,8,6,3,5} 排序后：{1,2,3,4,5,5,6,7,8,9} 排序原理: .选定一个增长量h，按照增长量h作为数据分组的依据，对数据进行分组  对分好组的每一组数据完成插入排序  减小增长量，最小减为1，重复第二">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201019215721637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-10-20T03:30:10.000Z">
+<meta property="article:modified_time" content="2020-10-19T13:57:53.289Z">
 <meta property="article:author" content="BigMeiniu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201019215721637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center">
   
     <link rel="alternative" href="/atom.xml" title="Lecherous&amp;fairy" type="application/atom+xml">
   
@@ -148,102 +154,220 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+<article id="post-高级排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      高级排序
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/20/%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+
+        
+        <a href="/2020/10/20/%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/" class="archive-article-date">
   	<time datetime="2020-10-20T03:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/20/%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/">高级排序</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="高级排序"><a href="#高级排序" class="headerlink" title="高级排序"></a>高级排序</h1><h2 id="1-1希尔排序"><a href="#1-1希尔排序" class="headerlink" title="1.1希尔排序"></a>1.1希尔排序</h2><ul>
+<li><p>希尔排序是插入排序的一种，又称“缩小增量排序”，是插入排序算法的一种更高效的改进版本</p>
+</li>
+<li><p>缩减插入排序的时间复杂度</p>
+</li>
+</ul>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p><strong>排序前：{9,1,2,5,7,4,8,6,3,5}</strong></p>
+<p><strong>排序后：{1,2,3,4,5,5,6,7,8,9}</strong></p>
+<h4 id="排序原理"><a href="#排序原理" class="headerlink" title="排序原理:"></a>排序原理:</h4><ol>
+<li><p>.选定一个增长量h，按照增长量h作为数据分组的依据，对数据进行分组</p>
+</li>
+<li><p>对分好组的每一组数据完成插入排序</p>
+</li>
+<li><p>减小增长量，最小减为1，重复第二步操作</p>
+<p><img src="https://img-blog.csdnimg.cn/20201019215721637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNzAx,size_16,color_FFFFFF,t_70#pic_center" alt="希尔"></p>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://BigMeiniu.github.io/020/10/20/%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/19/%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-10-19T05:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/19/%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/19/%E6%8E%92%E5%BA%8F/">简单排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">高级排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">1.1希尔排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">1.1.1.</span> <span class="toc-text">需求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">排序原理:</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "epiTFK8xz4Ymxezf1TpxcbDc-gzGzoHsz",
+            app_key: "zDi69GJoD1Ylmgc51gxxvvIU",
+            placeholder: "Just go go",
+            avatar:"retro"
+        });
+    }
+</script>
+
+  </section>
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-10-17T07:45:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -269,8 +393,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
